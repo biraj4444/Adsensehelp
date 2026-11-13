@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en" data-page="%%FILE%%">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>%%TITLE%%</title>
+<meta name="description" content="%%DESC%%">
+<meta http-equiv="Content-Security-Policy" content="%%CSP%%">
+<meta name="theme-color" content="#3b6cf6">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta property="og:type" content="website"><meta property="og:site_name" content="%%SITE_NAME%%">
+<meta property="og:title" content="%%TITLE%%"><meta property="og:description" content="%%DESC%%">
+<meta name="twitter:card" content="summary_large_image">
+%%CANONICAL%%<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<script src="assets/js/theme-init.js"></script>
+<link rel="stylesheet" href="assets/css/site.css">
+<script type="application/ld+json">%%LD%%</script>
+</head>
+<body data-accent="%%ACCENT%%">
+<a class="skip" href="#main">Skip to content</a>
+<div class="stripe" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+<div class="read-progress" aria-hidden="true"><span id="read-bar"></span></div>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="index.html" aria-label="AdSense Helper home">
+      <img class="logo-img" src="assets/img/logo.svg" width="40" height="40" alt="">
+      <span class="brand-text"><span class="brand-title">AdSense <b>Helper</b></span><small>Independent setup guide</small></span>
+    </a>
+    <nav class="site-nav" id="site-nav" aria-label="Main">%%NAV%%</nav>
+    <div class="header-tools">
+      <button class="icon-btn" id="open-search" type="button" aria-label="Search the site" title="Search ( / )"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 16l5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      <a class="progress-chip" href="learn.html#checklist" id="progress-chip" aria-label="Your overall progress" title="Your progress"><svg viewBox="0 0 36 36" width="30" height="30" aria-hidden="true"><circle cx="18" cy="18" r="15" fill="none" class="ring-bg" stroke-width="4"/><circle cx="18" cy="18" r="15" fill="none" class="ring-fg" stroke-width="4" stroke-linecap="round" id="ring-fg" transform="rotate(-90 18 18)"/></svg><span id="ring-text">0%</span></a>
+      <button class="icon-btn" id="open-reader" type="button" aria-label="Reading mode settings" aria-haspopup="dialog" title="Reading mode"><span class="aa" aria-hidden="true">Aa</span></button>
+      <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+    </div>
+  </div>
+</header>
+<main id="main">
+%%BODY%%
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div><p class="footer-brand"><img src="assets/img/logo.svg" width="32" height="32" alt="">AdSense <b>Helper</b></p>
+        <p>An independent learning site. It is <strong>not affiliated with, endorsed by or sponsored by Google</strong>. Google and AdSense are trademarks of Google LLC.
+        Nothing here promises AdSense approval, earnings or monetization.</p></div>
+      <div><h2>Guide</h2><ul>%%FOOTNAV%%</ul></div>
+      <div><h2>Project</h2><ul>%%PROJNAV%%</ul></div>
+      <div><h2>Official Google pages</h2><ul>
+        <li><a href="https://support.google.com/adsense/answer/9724" rel="noopener noreferrer">Eligibility requirements</a></li>
+        <li><a href="https://support.google.com/adsense/answer/48182" rel="noopener noreferrer">Program policies</a></li>
+        <li><a href="https://support.google.com/adsense/answer/12171612" rel="noopener noreferrer">Ads.txt guide</a></li>
+        <li><a href="https://support.google.com/adsense" rel="noopener noreferrer">AdSense Help Center</a></li></ul>
+        <p class="tiny">Links last checked %%VERIFIED%%. Google can change its documentation at any time.</p></div>
+    </div>
+    <div class="footer-bottom"><span>&copy; AdSense Helper. Guidance only, not legal, tax or financial advice.</span>
+      <span><a href="#" id="owner-link">Owner mode</a> &middot; <a href="#main">Back to top</a></span></div>
+  </div>
+</footer>
+<script src="assets/js/tasks.js"></script>
+<script src="assets/js/media-config.js"></script>
+<script src="assets/js/app.js" defer></script>
+%%EXTRA%%</body>
+</html>

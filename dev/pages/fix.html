@@ -1,0 +1,106 @@
+<section class="page-hero"><div class="wrap hero-split">
+  <div>
+    <p class="eyebrow"><i></i> Page 5 of 6 &middot; Fix it</p>
+    <h1>Something not working? Find the cause fast</h1>
+    <p class="lead">Answer a few questions and get the most likely fix, or search the full list of problems below. Each fix says how to confirm it worked.</p>
+    <div class="meta-row"><span class="pill accent" data-readtime>6 min read</span><span class="pill">12 common problems</span><span class="pill">Diagnosis wizard</span></div>
+  </div>
+  [[media fix-demo | Example: debugging with View Source | Add a YouTube, Vimeo or image URL]]
+</div></section>
+
+<div class="wrap doc">
+  <aside class="toc" id="toc" aria-label="On this page"></aside>
+  <article class="prose wide">
+    <h2 id="wizard-h">Diagnosis wizard</h2>
+    <div class="wizard" id="wizard" aria-live="polite"><noscript>Turn on JavaScript for the wizard, or use the list below.</noscript></div>
+
+    <h2 id="all-problems">All problems</h2>
+    <div class="tool-actions"><label class="sr-only" for="fix-search">Search problems</label><input id="fix-search" type="search" placeholder="Search: ads.txt, React, wrong ID..." autocomplete="off"><button class="btn btn-sm btn-ghost" id="fix-expand" type="button" aria-pressed="false">Expand all</button></div>
+    <div class="chips" role="group" aria-label="Filter by area">
+      <button class="chip" type="button" aria-pressed="false" data-cat-chip="Code">Code</button><button class="chip" type="button" aria-pressed="false" data-cat-chip="Ads">Ads</button>
+      <button class="chip" type="button" aria-pressed="false" data-cat-chip="ads.txt">ads.txt</button><button class="chip" type="button" aria-pressed="false" data-cat-chip="Setup">Setup</button>
+      <button class="chip" type="button" aria-pressed="false" data-cat-chip="Hosting">Hosting</button>
+    </div>
+    <p class="muted" id="fix-none" hidden>No matches. Try fewer words.</p>
+
+    <details class="acc" id="code-not-working" data-cat="Code"><summary><span class="sev high">Common</span>AdSense code not working</summary><div class="acc-body">
+      <h4>Problem</h4><p>You added the script but AdSense cannot find it, or View Source does not show it.</p>
+      <h4>Likely causes</h4><ul><li>The code is in the body, not the head.</li><li>The change was not deployed, or a cached page is served.</li><li>You edited a template the page does not use.</li><li>The snippet was retyped with a typo.</li></ul>
+      <h4>Fix</h4><ol><li>Open the live page, choose View Source and search for <code>adsbygoogle.js</code>.</li><li>If missing, add the exact snippet to the shared head template.</li><li>Deploy, purge any CDN cache and reload in a private window.</li></ol>
+      <h4>Verify</h4><p>One script tag inside the head with your real ID. The <a href="tools.html#tool-html">HTML checker</a> shows all green.</p></div></details>
+
+    <details class="acc" id="ads-not-appearing" data-cat="Ads"><summary><span class="sev high">Common</span>Ads not appearing</summary><div class="acc-body">
+      <h4>Problem</h4><p>The code is there but ad slots stay empty.</p>
+      <h4>Likely causes</h4><ul><li>The site is not ready yet, or has account alerts.</li><li>Auto ads or the unit is not enabled, or the unit was never placed.</li><li>A new unit has not started serving yet.</li><li>An ad blocker is active in your browser.</li><li>The domain you test is not the one added in AdSense (for example localhost).</li></ul>
+      <h4>Fix</h4><ol><li>Read your site status and alerts in AdSense.</li><li>Confirm Auto ads or the ad unit is switched on and placed.</li><li>Test in a private window with blockers off.</li><li>Allow time. Never click your own ads to test.</li></ol>
+      <h4>Verify</h4><p>The <code>ins</code> element gets a <code>data-adsbygoogle-status</code> attribute and there are no console errors. Use the <a href="tools.html#tool-console">live page inspector</a>.</p></div></details>
+
+    <details class="acc" id="wrong-id" data-cat="Code"><summary><span class="sev high">Common</span>Wrong or placeholder publisher ID</summary><div class="acc-body">
+      <h4>Problem</h4><p>Ads do not load, or AdSense flags ads.txt.</p>
+      <h4>Likely causes</h4><ul><li><code>ca-pub-XXXXXXXXXXXXXXXX</code> was never replaced.</li><li>A digit was dropped while retyping.</li><li>ads.txt uses <code>ca-pub-</code> instead of <code>pub-</code>.</li><li>An environment variable is missing in production.</li></ul>
+      <h4>Fix</h4><p>Copy the ID from your account. HTML uses <code>ca-pub-</code> + 16 digits; ads.txt uses <code>pub-</code> + the same digits. Read it from one setting.</p>
+      <h4>Verify</h4><p>The same digits appear in View Source and in <code>/ads.txt</code>.</p></div></details>
+
+    <details class="acc" id="placement" data-cat="Code"><summary><span class="sev med">Often</span>Code placement problems</summary><div class="acc-body">
+      <h4>Problem</h4><p>The snippet exists but sits in the wrong place or twice.</p>
+      <h4>Likely causes</h4><ul><li>It is in the body or after <code>&lt;/html&gt;</code>.</li><li>Several partials each add a copy.</li><li>Only some page templates include it.</li><li>The ad unit is inside a <code>display:none</code> element.</li></ul>
+      <h4>Fix</h4><p>Move one copy into the shared head, delete the others and keep ad units in visible containers.</p>
+      <h4>Verify</h4><p>Exactly one script in the head on your home page, an article and a category page.</p></div></details>
+
+    <details class="acc" id="ads-txt" data-cat="ads.txt"><summary><span class="sev high">Common</span>ads.txt problems</summary><div class="acc-body">
+      <h4>Problem</h4><p>AdSense reports ads.txt as not found or invalid.</p>
+      <h4>Likely causes</h4><ul><li>The file is not at the domain root.</li><li>The server returns an HTML page (a soft 404) or a login redirect.</li><li>Wrong ID or missing <code>pub-</code> prefix.</li><li>www and non-www serve different files.</li></ul>
+      <h4>Fix</h4><p>Open <code>https://yourdomain.com/ads.txt</code>. It must show plain text with your line. Fix the cause, then wait for AdSense to re-crawl.</p>
+      <h4>Verify</h4><p>The <a href="tools.html#tool-adstxt">ads.txt validator</a> passes and the URL shows your line.</p>
+      [[official]]<p>If the file displays in a browser, AdSense is likely to find it. Changes can take time. See the <a href="https://support.google.com/adsense/troubleshooter/9556696" rel="noopener noreferrer">ads.txt troubleshooter</a>.</p>[[/official]]</div></details>
+
+    <details class="acc" id="verification" data-cat="Setup"><summary><span class="sev med">Often</span>Verification issues</summary><div class="acc-body">
+      <h4>Problem</h4><p>AdSense cannot confirm that you own the site.</p>
+      <h4>Likely causes</h4><ul><li>The code is not in the live HTML head yet.</li><li>You entered a different address (www or not) in AdSense.</li><li>The site is behind a password or firewall.</li><li>robots.txt blocks <code>Mediapartners-Google</code>.</li><li>A cache still serves the old page.</li></ul>
+      <h4>Fix</h4><p>View Source on the exact address you entered, remove access barriers, check robots.txt and purge caches.</p>
+      <h4>Verify</h4><p><a href="tools.html#tool-html">HTML checker</a> and <a href="tools.html#tool-robots">robots.txt checker</a> are both clean.</p></div></details>
+
+    <details class="acc" id="auto-ads" data-cat="Ads"><summary><span class="sev low">Sometimes</span>Auto ads show nothing</summary><div class="acc-body">
+      <h4>Problem</h4><p>Auto ads are on but nothing appears.</p>
+      <h4>Likely causes</h4><ul><li>Auto ads are not enabled for this site.</li><li>The head script is missing on that page.</li><li>The page is very short.</li><li>A single-page app navigated without a reload.</li><li>A Content-Security-Policy blocks Google's scripts.</li></ul>
+      <h4>Fix</h4><p>Confirm Auto ads are on, the script is in the HTML, then reload fully and wait. Adjust your CSP as Google's documentation describes.</p>
+      <h4>Verify</h4><p>No CSP or script errors in the console after a full reload.</p></div></details>
+
+    <details class="acc" id="frameworks" data-cat="Code"><summary><span class="sev med">Often</span>Works in plain HTML, not in my framework</summary><div class="acc-body">
+      <h4>Problem</h4><p>Your React, Next.js, Flask or Django app does not show the code or ads.</p>
+      <h4>Likely causes</h4><ul><li>The script is added only by client-side JavaScript, so it is not in the first HTML.</li><li>React StrictMode runs effects twice.</li><li><code>NEXT_PUBLIC_</code> variables changed without a rebuild.</li><li>You edited a template the route does not use.</li></ul>
+      <h4>Fix</h4><p>Put the script in the static head file or root layout, guard <code>push</code> with a ref, rebuild after changing build-time variables. See the <a href="code.html#react">React</a> and <a href="code.html#nextjs">Next.js</a> examples.</p>
+      <h4>Verify</h4><p>View Source (not Inspect) shows the script and the console has no <code>adsbygoogle</code> errors.</p></div></details>
+
+    <details class="acc" id="already-have-ads" data-cat="Code"><summary><span class="sev med">Often</span>Console: all ins elements already have ads</summary><div class="acc-body">
+      <h4>Problem</h4><p>The console shows an error that all <code>ins</code> elements in the DOM already have ads in them.</p>
+      <h4>Likely causes</h4><ul><li><code>push</code> ran more times than there are empty units.</li><li>A component re-rendered and called <code>push</code> again.</li></ul>
+      <h4>Fix</h4><p>Call <code>push</code> once per unit. In React use a ref guard, as in the Code Lab component.</p>
+      <h4>Verify</h4><p>The <a href="tools.html#tool-html">HTML checker</a> shows push calls matching ad units, and the console error is gone.</p></div></details>
+
+    <details class="acc" id="deployment" data-cat="Hosting"><summary><span class="sev med">Often</span>Works locally, missing after deploy</summary><div class="acc-body">
+      <h4>Problem</h4><p>Everything is right on your computer, but the live site lacks the code or ads.txt.</p>
+      <h4>Likely causes</h4><ul><li>The host built an older commit.</li><li>ads.txt is not inside the published folder.</li><li>Environment variables are not set on the host.</li><li>The domain points at an old deployment.</li></ul>
+      <h4>Fix</h4><p>Trigger a clean deploy of the latest commit, check the published folder contents and set variables in the host dashboard.</p>
+      <h4>Verify</h4><p>View Source and <code>/ads.txt</code> on the live domain match your latest files.</p></div></details>
+
+    <details class="acc" id="https-dns" data-cat="Hosting"><summary><span class="sev med">Often</span>HTTPS, DNS or redirect problems</summary><div class="acc-body">
+      <h4>Problem</h4><p>Certificate warnings, redirect loops or the domain does not open.</p>
+      <h4>Likely causes</h4><ul><li>DNS records point to an old server or have not spread yet.</li><li>The certificate is not issued yet.</li><li>Cloudflare SSL mode Flexible with an origin that forces HTTPS causes a loop.</li><li>Mixed content: an HTTPS page loads <code>http://</code> files.</li></ul>
+      <h4>Fix</h4><p>Check records for the root domain and www, wait for the certificate, use SSL mode Full (strict) when the origin has a valid certificate, and change <code>http://</code> links to <code>https://</code>.</p>
+      <h4>Verify</h4><p>Both addresses open with a padlock and no loop.</p></div></details>
+
+    <details class="acc" id="cache" data-cat="Hosting"><summary><span class="sev low">Sometimes</span>Old version still showing (cache)</summary><div class="acc-body">
+      <h4>Problem</h4><p>You changed the code or ads.txt but the live site looks the same.</p>
+      <h4>Likely causes</h4><ul><li>The CDN or browser serves a cached copy.</li><li>Long cache times on HTML or ads.txt.</li><li>A script optimizer such as Cloudflare Rocket Loader delays the AdSense script.</li></ul>
+      <h4>Fix</h4><p>Purge the CDN, hard-refresh or use a private window, keep HTML and ads.txt cache short, and exclude the AdSense script from optimizers (for Rocket Loader, add <code>data-cfasync="false"</code> to that script tag).</p>
+      <h4>Verify</h4><p>View Source on the live URL shows your latest code.</p></div></details>
+
+    <details class="acc" id="not-ready" data-cat="Setup"><summary><span class="sev low">Sometimes</span>Site still reviewing or not ready</summary><div class="acc-body">
+      <h4>Problem</h4><p>Everything looks right but AdSense has not approved the site.</p>
+      <h4>What to know</h4><p>Approval and timing are Google's decisions and nobody can guarantee them. Read every message in your account. Keep the code in place, keep the site online and improve content quality rather than changing the code.</p>
+      [[official]]<p>Your content must be your own and comply with the <a href="https://support.google.com/adsense/answer/48182" rel="noopener noreferrer">AdSense Program policies</a>.</p>[[/official]]</div></details>
+
+    <div class="next-nav"><a class="btn btn-ghost" href="tools.html">&larr; Tools</a><a class="btn" href="index.html">Back to home</a></div>
+  </article>
+</div>

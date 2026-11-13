@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" role="img" aria-label="AdSense Helper logo">
+  <rect x="1" y="1" width="38" height="38" rx="11" fill="#fff"/>
+  <path d="M20 1h8a11 11 0 0 1 11 11v8H20z" fill="#f6b81a"/>
+  <path d="M1 20h19v19h-8A11 11 0 0 1 1 28z" fill="#3b6cf6"/>
+  <path d="M20 1v19H1v-8A11 11 0 0 1 12 1z" fill="#ef4d4d"/>
+  <path d="M20 20h19v8a11 11 0 0 1-11 11h-8z" fill="#21a366"/>
+  <path d="M16 14l-6 6 6 6M24 14l6 6-6 6" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

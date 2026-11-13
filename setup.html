@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en" data-page="setup">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AdSense setup guide: account, site connection, code and verification</title>
+<meta name="description" content="A numbered walkthrough from creating your AdSense account to verifying your code, publishing ads.txt and going live on free static hosting.">
+<meta http-equiv="Content-Security-Policy" content="default-src &#x27;self&#x27;; img-src &#x27;self&#x27; https: data: blob:; media-src &#x27;self&#x27; https: blob:; frame-src https://www.youtube-nocookie.com https://player.vimeo.com; script-src &#x27;self&#x27;; style-src &#x27;self&#x27;; connect-src &#x27;self&#x27;; base-uri &#x27;self&#x27;; form-action &#x27;none&#x27;; object-src &#x27;none&#x27;">
+<meta name="theme-color" content="#3b6cf6">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta property="og:type" content="website"><meta property="og:site_name" content="AdSense Helper">
+<meta property="og:title" content="AdSense setup guide: account, site connection, code and verification"><meta property="og:description" content="A numbered walkthrough from creating your AdSense account to verifying your code, publishing ads.txt and going live on free static hosting.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<script src="assets/js/theme-init.js"></script>
+<link rel="stylesheet" href="assets/css/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "name": "AdSense setup guide: account, site connection, code and verification", "description": "A numbered walkthrough from creating your AdSense account to verifying your code, publishing ads.txt and going live on free static hosting.", "inLanguage": "en"}</script>
+</head>
+<body data-accent="orange">
+<a class="skip" href="#main">Skip to content</a>
+<div class="stripe" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+<div class="read-progress" aria-hidden="true"><span id="read-bar"></span></div>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="index.html" aria-label="AdSense Helper home">
+      <img class="logo-img" src="assets/img/logo.png" width="40" height="40" alt="">
+      <span class="brand-text"><span class="brand-title">AdSense <b>Helper</b></span><small>Independent setup guide</small></span>
+    </a>
+    <nav class="site-nav" id="site-nav" aria-label="Main"><a class="nav-link" href="index.html">Home</a><a class="nav-link" href="learn.html">Learn</a><a class="nav-link" href="setup.html" aria-current="page">Setup</a><a class="nav-link" href="code.html">Code Lab</a><a class="nav-link" href="tools.html">Tools</a><a class="nav-link" href="fix.html">Fix it</a><a class="nav-link" href="about.html">About</a><a class="nav-link" href="contact.html">Contact</a></nav>
+    <div class="header-tools">
+      <button class="icon-btn" id="open-search" type="button" aria-label="Search the site" title="Search ( / )"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 16l5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      <a class="progress-chip" href="learn.html#checklist" id="progress-chip" aria-label="Your overall progress" title="Your progress"><svg viewBox="0 0 36 36" width="30" height="30" aria-hidden="true"><circle cx="18" cy="18" r="15" fill="none" class="ring-bg" stroke-width="4"/><circle cx="18" cy="18" r="15" fill="none" class="ring-fg" stroke-width="4" stroke-linecap="round" id="ring-fg" transform="rotate(-90 18 18)"/></svg><span id="ring-text">0%</span></a>
+      <button class="icon-btn" id="open-reader" type="button" aria-label="Reading mode settings" aria-haspopup="dialog" title="Reading mode"><span class="aa" aria-hidden="true">Aa</span></button>
+      <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+    </div>
+  </div>
+</header>
+<main id="main">
+<section class="page-hero"><div class="wrap hero-split">
+  <div>
+    <p class="eyebrow"><i></i> Page 2 of 6 &middot; Setup</p>
+    <h1>AdSense setup, one clear step at a time</h1>
+    <p class="lead">From creating your account to verifying your code and going live. Every step says what to do, where the code goes and how to prove it worked.</p>
+    <div class="meta-row"><span class="pill accent" data-readtime>10 min read</span><span class="pill">9 steps</span><span class="pill">Copy-ready code</span></div>
+  </div>
+  <figure class="media-slot" data-media="setup-overview" data-title="Example: the whole setup in one video" data-hint="Add a YouTube, Vimeo or image URL"><div class="media-frame"><div class="media-empty"><span class="media-icon" aria-hidden="true">&#127916;</span><span class="media-empty-title">Example: the whole setup in one video</span><span class="media-empty-hint">Add a YouTube, Vimeo or image URL</span></div></div><figcaption>Example: the whole setup in one video</figcaption></figure>
+</div></section>
+
+<div class="wrap doc">
+  <aside class="toc" id="toc" aria-label="On this page"></aside>
+  <article class="prose wide">
+    <div class="legend"><span class="pill off">Official Google information</span><span class="pill tip">Our recommendation</span></div>
+    <div class="meter" data-meter="setup"><progress max="1" value="0" aria-label="Setup progress"></progress><span>0% ready</span></div>
+
+    <h2 id="steps">The steps</h2>
+    <ol class="steps">
+
+      <li class="step" id="create-account"><span class="step-num">1</span><div class="step-card">
+        <header><h3 id="s-create-account">Create your AdSense account</h3><span class="step-badge">Account</span></header>
+        <div class="step-body"><div>
+          <ul class="facts"><li><b>What</b><span>The account that owns your ad code and payments.</span></li>
+          <li><b>Do</b><span>Go to the AdSense website, sign in with a Google Account and follow the sign-up questions.</span></li>
+          <li><b>Verify</b><span>You can see your publisher ID (<code>pub-</code> and 16 digits) in your account.</span></li></ul>
+          <aside class="callout official"><p class="callout-label"><span class="callout-dot" aria-hidden="true"></span>Official Google information</p><p>Applicants must be at least 18. Under-18 applicants can have a parent or guardian sign up with their own Google Account, and payments go to that adult.</p></aside>
+          <aside class="callout tip"><p class="callout-label"><span class="callout-dot" aria-hidden="true"></span>Our recommendation</p><p>Use a Google Account you will keep for years and turn on two-step verification. If you lose it you lose the ad account.</p></aside>
+          <ul class="checklist"><li><label><input type="checkbox" data-task="setup-account"><span>I signed in with a Google Account I will keep.</span></label></li>
+          <li><label><input type="checkbox" data-task="setup-id"><span>I found my publisher ID in my account.</span></label></li></ul>
+        </div><figure class="media-slot" data-media="setup-account" data-title="Example: sign-up screen" data-hint="Add a screenshot or video URL"><div class="media-frame"><div class="media-empty"><span class="media-icon" aria-hidden="true">&#127916;</span><span class="media-empty-title">Example: sign-up screen</span><span class="media-empty-hint">Add a screenshot or video URL</span></div></div><figcaption>Example: sign-up screen</figcaption></figure></div>
+      </div></li>
+
+      <li class="step" id="add-site"><span class="step-num">2</span><div class="step-card">
+        <header><h3 id="s-add-site">Add your site</h3><span class="step-badge">Site</span></header>
+        <div class="step-body"><div>
+          <ul class="facts"><li><b>What</b><span>Tell AdSense which website you want to use.</span></li>
+          <li><b>Do</b><span>Enter the address exactly as visitors reach it, including <code>https://</code> and either <code>www</code> or no <code>www</code>.</span></li>
+          <li><b>Mistake</b><span>Entering <code>example.com</code> while your site redirects to <code>www.example.com</code>, or the reverse.</span></li></ul>
+          <aside class="callout tip"><p class="callout-label"><span class="callout-dot" aria-hidden="true"></span>Our recommendation</p><p>Pick one address as the main one and redirect the other to it permanently. Then use only that address everywhere.</p></aside>
+          <ul class="checklist"><li><label><input type="checkbox" data-task="setup-site"><span>The address I entered is exactly the one that opens in my browser.</span></label></li></ul>
+        </div><figure class="media-slot" data-media="setup-add-site" data-title="Example: adding a site" data-hint="Add a screenshot or video URL"><div class="media-frame"><div class="media-empty"><span class="media-icon" aria-hidden="true">&#127916;</span><span class="media-empty-title">Example: adding a site</span><span class="media-empty-hint">Add a screenshot or video URL</span></div></div><figcaption>Example: adding a site</figcaption></figure></div>
+      </div></li>
+
+      <li class="step" id="connect"><span class="step-num">3</span><div class="step-card">
+        <header><h3 id="s-connect">Choose how to connect it</h3><span class="step-badge">Connect</span></header>
+        <div class="step-body"><div>
+          <ul class="facts"><li><b>What</b><span>You prove to AdSense that the site is yours.</span></li>
+          <li><b>Do</b><span>AdSense shows one or more methods, depending on your account and site. These can include a code snippet, an ads.txt snippet or a meta tag. Use the method it shows you.</span></li>
+          <li><b>Rule</b><span>Copy the exact text AdSense gives you. Do not retype it.</span></li></ul>
+          <aside class="callout official"><p class="callout-label"><span class="callout-dot" aria-hidden="true"></span>Official Google information</p><p>You need to be able to place AdSense code between the head tags of your pages. See <a href="https://support.google.com/adsense/answer/91205" rel="noopener noreferrer">Access to your site's HTML</a>.</p></aside>
+          <ul class="checklist"><li><label><input type="checkbox" data-task="setup-method"><span>I copied the snippet from my own AdSense account.</span></label></li></ul>
+        </div><figure class="media-slot" data-media="setup-connect" data-title="Example: connection methods" data-hint="Add a screenshot or video URL"><div class="media-frame"><div class="media-empty"><span class="media-icon" aria-hidden="true">&#127916;</span><span class="media-empty-title">Example: connection methods</span><span class="media-empty-hint">Add a screenshot or video URL</span></div></div><figcaption>Example: connection methods</figcaption></figure></div>
+      </div></li>
+
+      <li class="step" id="add-code"><span class="step-num">4</span><div class="step-card">
+        <header><h3 id="s-add-code">Add the code to your page head</h3><span class="step-badge">Code</span></header>
+        <div class="step-body"><div>
+          <ul class="facts"><li><b>What</b><span>One script that loads Google's ad library.</span></li>
+          <li><b>Where</b><span>Inside <code>&lt;head&gt;</code>, once per page, on every page that should show ads. Put it in your shared layout.</span></li>
+          <li><b>Verify</b><span>View Source on the live page and search for <code>adsbygoogle</code>.</span></li></ul>
+<div class="codebox" data-lang="html" data-hl="2-5"><div class="codebox-head"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="codebox-file" title="index.html">index.html</span><span class="lang-badge lang-html"><b aria-hidden="true"></b>HTML</span><button type="button" class="copy-btn" aria-label="Copy code to clipboard"><span class="copy-icon" aria-hidden="true">&#10697;</span><span class="copy-label">Copy code</span></button></div><div class="codebody"><pre class="gutter" aria-hidden="true">1
+2
+3
+4
+5
+6</pre><pre class="codepre" tabindex="0"><code class="language-html">&lt;head&gt;
+  &lt;!-- Google AdSense: use the exact snippet from your account --&gt;
+  &lt;script async
+          src=&quot;https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX&quot;
+          crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;</code></pre></div><span class="sr-only copy-status" role="status" aria-live="polite"></span></div>
+          <aside class="callout official"><p class="callout-label"><span class="callout-dot" aria-hidden="true"></span>Official Google information</p><p>AdSense code is placed between the head tags of your pages.</p></aside>
+          <p>Using React, Next.js, Flask, Django, PHP or WordPress? Open the <a href="code.html">Code Lab</a> for the exact file and placement. Enter your ID there and this box fills in too.</p>
+          <ul class="checklist"><li><label><input type="checkbox" data-task="setup-code"><span>The script is in the head of my shared layout.</span></label></li>
+          <li><label><input type="checkbox" data-task="setup-placeholder"><span>No placeholder like XXXXXXXXXXXXXXXX is left.</span></label></li>
+          <li><label><input type="checkbox" data-task="setup-deployed"><span>I deployed the change to my live site.</span></label></li></ul>
+        </div><figure class="media-slot" data-media="setup-code" data-title="Example: code in the head" data-hint="Add a screenshot or video URL"><div class="media-frame"><div class="media-empty"><span class="media-icon" aria-hidden="true">&#127916;</span><span class="media-empty-title">Example: code in the head</span><span class="media-empty-hint">Add a screenshot or video URL</span></div></div><figcaption>Example: code in the head</figcaption></figure></div>
+      </div></li>
+
+      <li class="step" id="verify"><span class="step-num">5</span><div class="step-card">
+        <header><h3 id="s-verify">Verify the code is really live</h3><span class="step-badge">Verify</span></header>
+        <div class="step-body"><div>
+          <ul class="facts"><li><b>What</b><span>Confirm that the code is in the HTML your server sends, then press the verify button in AdSense.</span></li>
+          <li><b>Do</b><span>Open your live page, choose View Source (not Inspect), search for <code>adsbygoogle.js</code>. Paste the source into the <a href="tools.html#tool-html">HTML checker</a>.</span></li>
+          <li><b>Why</b><span>Inspect shows code added by JavaScript after load. Verification needs it in the page HTML.</span></li></ul>
+          <aside class="callout tip"><p class="callout-label"><span class="callout-dot" aria-hidden="true"></span>Our recommendation</p><p>Deploy first, verify second. A cached or old build is the most common reason verification fails.</p></aside>
+          <ul class="checklist"><li><label><input type="checkbox" data-task="setup-source"><span>View Source on the live URL shows the script once, in the head.</span></label></li>
+          <li><label><input type="checkbox" data-task="setup-pressed"><span>I pressed verify in AdSense.</span></label></li></ul>
+        </div><figure class="media-slot" data-media="setup-verify" data-title="Example: View Source" data-hint="Add a screenshot or video URL"><div class="media-frame"><div class="media-empty"><span class="media-icon" aria-hidden="true">&#127916;</span><span class="media-empty-title">Example: View Source</span><span class="media-empty-hint">Add a screenshot or video URL</span></div></div><figcaption>Example: View Source</figcaption></figure></div>
+      </div></li>
+
+      <li class="step" id="ads-txt"><span class="step-num">6</span><div class="step-card">
+        <header><h3 id="s-ads-txt">Publish your ads.txt file</h3><span class="step-badge">ads.txt</span></header>
+        <div class="step-body"><div>
+          <ul class="facts"><li><b>What</b><span>A public text file listing who may sell ads on your site.</span></li>
+          <li><b>Where</b><span>The root of your domain, so it opens at <code>https://yourdomain.com/ads.txt</code>.</span></li>
+          <li><b>Verify</b><span>Open that address in a browser. It must show plain text.</span></li></ul>
+<div class="codebox no-numbers" data-lang="text"><div class="codebox-head"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="codebox-file" title="ads.txt">ads.txt</span><span class="lang-badge lang-text"><b aria-hidden="true"></b>Text</span><button type="button" class="copy-btn" aria-label="Copy code to clipboard"><span class="copy-icon" aria-hidden="true">&#10697;</span><span class="copy-label">Copy code</span></button></div><div class="codebody"><pre class="codepre" tabindex="0"><code class="language-text">google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0</code></pre></div><span class="sr-only copy-status" role="status" aria-live="polite"></span></div>
+          <aside class="callout official"><p class="callout-label"><span class="callout-dot" aria-hidden="true"></span>Official Google information</p><p>ads.txt is not mandatory but is highly recommended. If the file displays in your browser, AdSense is likely to find it. Changes can take time to appear. See the <a href="https://support.google.com/adsense/answer/12171612" rel="noopener noreferrer">Ads.txt guide</a>.</p></aside>
+          <p>Build and validate yours with the <a href="tools.html#tool-adstxt">ads.txt tools</a>.</p>
+          <ul class="checklist"><li><label><input type="checkbox" data-task="setup-adstxt"><span>/ads.txt opens in my browser as plain text with my ID.</span></label></li></ul>
+        </div><figure class="media-slot" data-media="setup-adstxt" data-title="Example: ads.txt in a browser" data-hint="Add a screenshot or video URL"><div class="media-frame"><div class="media-empty"><span class="media-icon" aria-hidden="true">&#127916;</span><span class="media-empty-title">Example: ads.txt in a browser</span><span class="media-empty-hint">Add a screenshot or video URL</span></div></div><figcaption>Example: ads.txt in a browser</figcaption></figure></div>
+      </div></li>
+
+      <li class="step" id="review"><span class="step-num">7</span><div class="step-card">
+        <header><h3 id="s-review">Wait for review (and keep calm)</h3><span class="step-badge">Review</span></header>
+        <div class="step-body"><div>
+          <ul class="facts"><li><b>What</b><span>Google reviews the site. The decision and the timing are Google's.</span></li>
+          <li><b>Do</b><span>Leave the code in place, keep the site online and check your account and email for messages.</span></li>
+          <li><b>Don't</b><span>Make big changes to the site mid-review, or pay anyone who promises approval.</span></li></ul>
+          <aside class="callout warn"><p class="callout-label"><span class="callout-dot" aria-hidden="true"></span>Watch out</p><p>No tool, service or guide, including this one, can guarantee approval. If something is flagged, the message in your account says what to fix.</p></aside>
+          <ul class="checklist"><li><label><input type="checkbox" data-task="setup-wait"><span>I read the messages in my AdSense account.</span></label></li></ul>
+        </div><figure class="media-slot" data-media="setup-review" data-title="Example: account status" data-hint="Add a screenshot or video URL"><div class="media-frame"><div class="media-empty"><span class="media-icon" aria-hidden="true">&#127916;</span><span class="media-empty-title">Example: account status</span><span class="media-empty-hint">Add a screenshot or video URL</span></div></div><figcaption>Example: account status</figcaption></figure></div>
+      </div></li>
+
+      <li class="step" id="configure-ads"><span class="step-num">8</span><div class="step-card">
+        <header><h3 id="s-configure-ads">Create ads: Auto ads or ad units</h3><span class="step-badge">Ads</span></header>
+        <div class="step-body"><div>
+          <ul class="facts"><li><b>Auto ads</b><span>Turn them on for the site in AdSense. Google chooses positions. Needs only the head script.</span></li>
+          <li><b>Ad units</b><span>Create a unit in AdSense, then paste its markup where the ad should appear. One <code>push</code> call per unit.</span></li>
+          <li><b>Tip</b><span>Start with one or two responsive units in clear spots.</span></li></ul>
+<div class="codebox" data-lang="html" data-hl="1-8"><div class="codebox-head"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="codebox-file" title="article.html">article.html</span><span class="lang-badge lang-html"><b aria-hidden="true"></b>HTML</span><button type="button" class="copy-btn" aria-label="Copy code to clipboard"><span class="copy-icon" aria-hidden="true">&#10697;</span><span class="copy-label">Copy code</span></button></div><div class="codebody"><pre class="gutter" aria-hidden="true">1
+2
+3
+4
+5
+6
+7
+8
+9</pre><pre class="codepre" tabindex="0"><code class="language-html">&lt;ins class=&quot;adsbygoogle&quot;
+     style=&quot;display:block&quot;
+     data-ad-client=&quot;ca-pub-XXXXXXXXXXXXXXXX&quot;
+     data-ad-slot=&quot;1234567890&quot;
+     data-ad-format=&quot;auto&quot;
+     data-full-width-responsive=&quot;true&quot;&gt;&lt;/ins&gt;
+&lt;script&gt;
+  (adsbygoogle = window.adsbygoogle || []).push({});
+&lt;/script&gt;</code></pre></div><span class="sr-only copy-status" role="status" aria-live="polite"></span></div>
+          <aside class="callout official"><p class="callout-label"><span class="callout-dot" aria-hidden="true"></span>Official Google information</p><p>Do not encourage clicks or point attention at ads with arrows or graphics, and do not place ads in pop-ups, emails or on pages without content.</p></aside>
+          <p>Generate this for your own slot and format with the <a href="tools.html#tool-unit">ad unit builder</a>.</p>
+          <ul class="checklist"><li><label><input type="checkbox" data-task="setup-units"><span>I chose Auto ads or placed unit code in my templates.</span></label></li>
+          <li><label><input type="checkbox" data-task="setup-test"><span>I tested on a phone and desktop without clicking my own ads.</span></label></li></ul>
+        </div><figure class="media-slot" data-media="setup-units" data-title="Example: creating an ad unit" data-hint="Add a screenshot or video URL"><div class="media-frame"><div class="media-empty"><span class="media-icon" aria-hidden="true">&#127916;</span><span class="media-empty-title">Example: creating an ad unit</span><span class="media-empty-hint">Add a screenshot or video URL</span></div></div><figcaption>Example: creating an ad unit</figcaption></figure></div>
+      </div></li>
+
+      <li class="step" id="go-live"><span class="step-num">9</span><div class="step-card">
+        <header><h3 id="s-go-live">Go live: free static hosting</h3><span class="step-badge">Launch</span></header>
+        <div class="step-body"><div>
+          <ul class="facts"><li><b>What</b><span>Put your site on the internet with HTTPS and your own domain.</span></li>
+          <li><b>Hosts</b><span>GitHub Pages, Cloudflare Pages or Netlify can serve a static site for free. Check each one's current limits.</span></li>
+          <li><b>Remember</b><span>Put <code>ads.txt</code> and <code>robots.txt</code> in the published folder so they sit at the root.</span></li></ul>
+<div class="codebox" data-lang="bash" data-hl="5-6"><div class="codebox-head"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="codebox-file" title="Termux">Termux</span><span class="lang-badge lang-bash"><b aria-hidden="true"></b>Shell</span><button type="button" class="copy-btn" aria-label="Copy code to clipboard"><span class="copy-icon" aria-hidden="true">&#10697;</span><span class="copy-label">Copy code</span></button></div><div class="codebody"><pre class="gutter" aria-hidden="true">1
+2
+3
+4
+5
+6</pre><pre class="codepre" tabindex="0"><code class="language-bash">pkg install git python
+cd my-site
+git init &amp;&amp; git add . &amp;&amp; git commit -m &quot;First version&quot;
+git branch -M main
+git remote add origin https://github.com/YOUR-USER/YOUR-REPO.git
+git push -u origin main</code></pre></div><span class="sr-only copy-status" role="status" aria-live="polite"></span></div>
+          <p>Then connect the repository in your host's dashboard, add your custom domain, and follow the DNS records it shows. Wait for the HTTPS certificate before verifying in AdSense.</p>
+          <aside class="callout tip"><p class="callout-label"><span class="callout-dot" aria-hidden="true"></span>Our recommendation</p><p>Preview locally first: <code>python -m http.server 8080</code> in your site folder, then open <code>http://localhost:8080</code>.</p></aside>
+          <ul class="checklist"><li><label><input type="checkbox" data-task="setup-live"><span>Both www and non-www open over HTTPS and one redirects to the other.</span></label></li>
+          <li><label><input type="checkbox" data-task="setup-final"><span>I re-checked View Source and /ads.txt on the live domain.</span></label></li></ul>
+        </div><figure class="media-slot" data-media="setup-golive" data-title="Example: connecting a domain" data-hint="Add a screenshot or video URL"><div class="media-frame"><div class="media-empty"><span class="media-icon" aria-hidden="true">&#127916;</span><span class="media-empty-title">Example: connecting a domain</span><span class="media-empty-hint">Add a screenshot or video URL</span></div></div><figcaption>Example: connecting a domain</figcaption></figure></div>
+      </div></li>
+    </ol>
+
+    <h2 id="maintain">After launch: a 5-minute monthly routine</h2>
+    <p>Hosting changes, redesigns and theme updates can quietly remove your code. A short routine catches that early.</p>
+    <ul class="checklist">
+      <li><label><input type="checkbox" data-task="maintain-source"><span>View Source: script present once, correct ID.</span></label></li>
+      <li><label><input type="checkbox" data-task="maintain-ads"><span>/ads.txt still opens and the ID matches my account.</span></label></li>
+      <li><label><input type="checkbox" data-task="maintain-alerts"><span>I read my AdSense alerts and emails.</span></label></li>
+      <li><label><input type="checkbox" data-task="maintain-phone"><span>I checked the layout on a phone.</span></label></li>
+    </ul>
+    <aside class="callout official"><p class="callout-label"><span class="callout-dot" aria-hidden="true"></span>Official Google information</p><p>Google may change its policies at any time, and publishers are responsible for keeping up to date with them.</p></aside>
+
+    <div class="next-nav"><a class="btn btn-ghost" href="learn.html">&larr; Learn</a><a class="btn" href="code.html">Next: the Code Lab &rarr;</a></div>
+  </article>
+</div>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div><p class="footer-brand"><img src="assets/img/logo.png" width="32" height="32" alt="">AdSense <b>Helper</b></p>
+        <p>An independent learning site. It is <strong>not affiliated with, endorsed by or sponsored by Google</strong>. Google and AdSense are trademarks of Google LLC.
+        Nothing here promises AdSense approval, earnings or monetization.</p></div>
+      <div><h2>Guide</h2><ul><li><a href="index.html">Home</a></li><li><a href="learn.html">Learn</a></li><li><a href="setup.html">Setup</a></li><li><a href="code.html">Code Lab</a></li><li><a href="tools.html">Tools</a></li><li><a href="fix.html">Fix it</a></li></ul></div>
+      <div><h2>Project</h2><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="mailto:example@gmail.com">example@gmail.com</a></li></ul></div>
+      <div><h2>Official Google pages</h2><ul>
+        <li><a href="https://support.google.com/adsense/answer/9724" rel="noopener noreferrer">Eligibility requirements</a></li>
+        <li><a href="https://support.google.com/adsense/answer/48182" rel="noopener noreferrer">Program policies</a></li>
+        <li><a href="https://support.google.com/adsense/answer/12171612" rel="noopener noreferrer">Ads.txt guide</a></li>
+        <li><a href="https://support.google.com/adsense" rel="noopener noreferrer">AdSense Help Center</a></li></ul>
+        <p class="tiny">Links last checked 30 Sep 2026. Google can change its documentation at any time.</p></div>
+    </div>
+    <div class="footer-bottom"><span>&copy; AdSense Helper. Guidance only, not legal, tax or financial advice.</span>
+      <span><a href="#" id="owner-link">Owner mode</a> &middot; <a href="#main">Back to top</a></span></div>
+  </div>
+</footer>
+<script src="assets/js/tasks.js"></script>
+<script src="assets/js/media-config.js"></script>
+<script src="assets/js/app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<section class="page-hero"><div class="wrap hero-split">
+  <div>
+    <p class="eyebrow"><i></i> Page 4 of 6 &middot; Tools</p>
+    <h1>Check your work in seconds</h1>
+    <p class="lead">Paste your HTML, ads.txt or robots.txt and get plain-language results. Everything runs in your browser; nothing is uploaded.</p>
+    <div class="meta-row"><span class="pill accent">6 free tools</span><span class="pill">No sign-up</span><span class="pill">Private by design</span></div>
+  </div>
+  [[media tools-demo | Example: using the HTML checker | Add a YouTube, Vimeo or image URL]]
+</div></section>
+
+<div class="wrap doc">
+  <aside class="toc" id="toc" aria-label="On this page"></aside>
+  <article class="prose wide">
+    <p class="disclaimer">Technical diagnostics only. These tools check text you paste. They cannot see your live site and they do not predict or guarantee Google's AdSense approval.</p>
+
+    <section class="tool" id="tool-html">
+      <h2>1 &middot; AdSense HTML checker</h2>
+      <p>Open your live page, choose View Source, copy everything and paste it here. It looks at placement, IDs, duplicates and ad units.</p>
+      <label for="html-in" class="lab-label">Page HTML</label>
+      <textarea id="html-in" spellcheck="false" placeholder="Paste the full page source here"></textarea>
+      <div class="tool-actions"><button class="btn" id="html-run" type="button">Check my HTML</button><button class="btn btn-ghost" id="html-sample" type="button">Try a broken example</button><button class="btn btn-ghost" id="html-clear" type="button">Clear</button></div>
+      <div id="html-out" aria-live="polite" hidden></div>
+    </section>
+
+    <section class="tool" id="tool-adstxt">
+      <h2>2 &middot; ads.txt builder and validator</h2>
+      <p>Turn your publisher ID into the correct line, then validate a file before you publish it.</p>
+      <label for="pub-in" class="lab-label">Publisher ID</label>
+      <input id="pub-in" type="text" placeholder="pub-1234567890123456" autocomplete="off" maxlength="40">
+      <p class="field-msg" id="pub-msg" role="status"></p>
+      <p class="lab-label">Your ads.txt line</p>
+[[code text ads.txt numbers=off id=line-box]]
+google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+[[/code]]
+      <p class="lab-label">Same ID for your page head</p>
+[[code html head.html id=id-box]]
+<!-- in <head> -->
+<meta name="google-adsense-account" content="ca-pub-XXXXXXXXXXXXXXXX">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+        crossorigin="anonymous"></script>
+[[/code]]
+      <h3>Validate an existing file</h3>
+      <label for="txt-in" class="lab-label">Paste your ads.txt</label>
+      <textarea id="txt-in" spellcheck="false" placeholder="google.com, pub-1234567890123456, DIRECT, f08c47fec0942fa0"></textarea>
+      <div class="tool-actions"><button class="btn" id="txt-run" type="button">Validate</button><button class="btn btn-ghost" id="txt-sample" type="button">Try an example with mistakes</button></div>
+      <div id="txt-out" aria-live="polite" hidden></div>
+      [[official]]<p>ads.txt is not mandatory but is highly recommended. Read the <a href="https://support.google.com/adsense/answer/12171612" rel="noopener noreferrer">Ads.txt guide</a> and the <a href="https://support.google.com/adsense/troubleshooter/9556696" rel="noopener noreferrer">troubleshooter</a>.</p>[[/official]]
+    </section>
+
+    <section class="tool" id="tool-unit">
+      <h2>3 &middot; Ad unit builder</h2>
+      <p>Pick a format, enter your IDs and copy the finished markup. Leave the slot empty to see a placeholder.</p>
+      <div class="pz-row">
+        <div><label for="unit-format" class="lab-label">Format</label><select id="unit-format"><option value="responsive">Responsive display</option><option value="article">In-article</option><option value="fixed">Fixed 300 x 250</option><option value="auto">Auto ads (head script only)</option></select></div>
+        <div><label for="unit-client" class="lab-label">Publisher ID</label><input id="unit-client" type="text" placeholder="ca-pub-1234567890123456" autocomplete="off" maxlength="40"></div>
+        <div><label for="unit-slot" class="lab-label">Ad slot ID</label><input id="unit-slot" type="text" inputmode="numeric" placeholder="1234567890" autocomplete="off" maxlength="14"></div>
+      </div>
+      <p class="field-msg" id="unit-msg" role="status"></p>
+      <label class="check-line"><input type="checkbox" id="unit-reserve" checked> Reserve space so the page does not jump</label>
+[[code html ad-unit.html id=unit-box]]
+<!-- generated -->
+[[/code]]
+      <div><p class="lab-label">CSS for the reserved space</p>
+[[code css ad-slot.css id=unit-css]]
+.ad-slot { min-height: 280px; }
+[[/code]]
+      </div>
+    </section>
+
+    <section class="tool" id="tool-robots">
+      <h2>4 &middot; robots.txt checker</h2>
+      <p>Make sure nothing blocks the AdSense crawler, <code>Mediapartners-Google</code>.</p>
+      <label for="rob-in" class="lab-label">Paste your robots.txt</label>
+      <textarea id="rob-in" spellcheck="false" placeholder="User-agent: *&#10;Allow: /"></textarea>
+      <div class="tool-actions"><button class="btn" id="rob-run" type="button">Check</button><button class="btn btn-ghost" id="rob-sample" type="button">Try a blocking example</button></div>
+      <div id="rob-out" aria-live="polite" hidden></div>
+    </section>
+
+    <section class="tool" id="tool-console">
+      <h2>5 &middot; Live page inspector</h2>
+      <p>The tools above cannot see your live site, because browsers stop one website reading another. This snippet runs inside <em>your own</em> page instead and reports what AdSense is doing.</p>
+      <ol><li>Open your live page on a desktop browser.</li><li>Open Developer Tools (F12) and choose the Console tab.</li><li>Paste the snippet and press Enter.</li></ol>
+[[code javascript inspector.js]]
+(function () {
+  var s = [].slice.call(document.querySelectorAll('script[src*="adsbygoogle.js"]'));
+  var ins = [].slice.call(document.querySelectorAll('ins.adsbygoogle'));
+  var meta = document.querySelector('meta[name="google-adsense-account"]');
+  var r = ['AdSense script tags: ' + s.length + (s.length > 1 ? '  (more than one: remove duplicates)' : '')];
+  s.forEach(function (x) {
+    var m = /client=(ca-pub-\d+)/.exec(x.src);
+    r.push('  client: ' + (m ? m[1] : 'MISSING') + '  in <' + (x.closest('head') ? 'head' : 'body') + '>');
+  });
+  r.push('Ad units (ins.adsbygoogle): ' + ins.length);
+  ins.forEach(function (i, n) {
+    r.push('  #' + (n + 1) + ' processed=' + (i.getAttribute('data-adsbygoogle-status') || 'no') +
+      ' ad=' + (i.getAttribute('data-ad-status') || 'n/a') + ' size=' + i.offsetWidth + 'x' + i.offsetHeight);
+  });
+  if (meta) r.push('Account meta tag: ' + meta.content);
+  console.log(r.join('\n'));
+})();
+[[/code]]
+      [[note]]<p>It only reads attributes already on your page, and sends nothing anywhere. Android browsers have no Developer Tools console, so use a desktop browser or remote debugging from your phone.</p>[[/note]]
+    </section>
+
+    <section class="tool" id="tool-more">
+      <h2>6 &middot; Quick reference</h2>
+      <ul>
+        <li><strong>Publisher ID:</strong> <code>pub-</code> + 16 digits. In HTML: <code>ca-pub-</code> + the same digits.</li>
+        <li><strong>Ad slot ID:</strong> a number (usually 10 digits) for one ad unit. Not the same as the publisher ID.</li>
+        <li><strong>ads.txt line:</strong> <code>google.com, pub-ID, DIRECT, f08c47fec0942fa0</code></li>
+        <li><strong>Crawler name:</strong> <code>Mediapartners-Google</code></li>
+      </ul>
+    </section>
+
+    <div class="next-nav"><a class="btn btn-ghost" href="code.html">&larr; Code Lab</a><a class="btn" href="fix.html">Next: fix problems &rarr;</a></div>
+  </article>
+</div>

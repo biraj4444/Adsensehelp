@@ -1,0 +1,52 @@
+<section class="page-hero"><div class="wrap">
+  <p class="eyebrow"><i></i> Contact</p>
+  <h1>Questions, corrections or ideas? Write to me</h1>
+  <p class="lead">I'm Kaustav, the person behind AdSense Helper. Send a question, report something that is wrong or out of date, or suggest what would make the guide better.</p>
+  <div class="meta-row"><span class="pill accent">Email</span><span class="pill">No sign-up</span><span class="pill">Private</span></div>
+</div></section>
+
+<div class="wrap doc">
+  <aside class="toc" id="toc" aria-label="On this page"></aside>
+  <article class="prose wide">
+
+    <h2 id="email">Email</h2>
+    <div class="contact-card">
+      <div><p class="lab-label">Write to</p><p class="contact-mail"><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></p></div>
+      <button class="btn btn-sm btn-ghost" type="button" id="copy-email">Copy address</button>
+    </div>
+
+    <h2 id="compose">Write your message here</h2>
+    <p>This site has no server, so it cannot send mail itself. Fill in the form and press the button: your own email app opens with the message ready to send. Nothing is stored or sent by this website.</p>
+    <div class="composer" id="composer" data-email="{{EMAIL}}">
+      <div class="pz-row c-two">
+        <div><label class="lab-label" for="m-name">Your name (optional)</label><input id="m-name" type="text" autocomplete="name" maxlength="80"></div>
+        <div><label class="lab-label" for="m-topic">Topic</label>
+          <select id="m-topic"><option>Question about the guide</option><option>Something is wrong or out of date</option><option>Suggestion or idea</option><option>Help with a setup problem</option><option>Something else</option></select></div>
+      </div>
+      <div><label class="lab-label" for="m-page">Page or link it is about (optional)</label><input id="m-page" type="text" inputmode="url" placeholder="For example: setup.html or your site address" maxlength="200"></div>
+      <div><label class="lab-label" for="m-msg">Your message</label><textarea id="m-msg" maxlength="1500" placeholder="Tell me what you were trying to do, what happened, and any error message you saw."></textarea>
+        <p class="field-msg" id="m-count" role="status">0 / 1500</p></div>
+      <div class="tool-actions">
+        <a class="btn btn-indigo" id="m-open" href="mailto:{{EMAIL}}" aria-disabled="true">Open in my email app</a>
+        <button class="btn btn-ghost btn-indigo" type="button" id="m-copy">Copy message</button>
+      </div>
+      <p class="tiny">Your email app and email provider handle the message once it opens. Never include passwords, private keys or full account details.</p>
+    </div>
+
+    <h2 id="before">Before you write</h2>
+    <ul>
+      <li>For setup problems, try the <a href="fix.html">diagnosis wizard</a> first. It solves most cases in under a minute.</li>
+      <li>Mention the page, your framework (for example Flask or Next.js) and the exact error text.</li>
+      <li>Say what you expected to happen and what happened instead.</li>
+    </ul>
+    [[warn]]<p>I am not affiliated with Google. I cannot see your AdSense account, speed up a review, or change a decision. Decisions about AdSense accounts are made only by Google.</p>[[/warn]]
+
+    <h2 id="faq">Quick answers</h2>
+    <details class="acc"><summary>Can you get my AdSense application approved?</summary><div class="acc-body"><p>No. Only Google decides, and nobody outside Google can promise a result. What I can do is help you understand the setup and fix technical mistakes.</p></div></details>
+    <details class="acc"><summary>Is my message stored on this website?</summary><div class="acc-body"><p>No. The site is static and has no server or database. The message only exists in your email app and with your email provider.</p></div></details>
+    <details class="acc"><summary>I found a mistake. What is the best way to report it?</summary><div class="acc-body"><p>Choose "Something is wrong or out of date", name the page and, if you can, paste the link to Google's page that says otherwise. Corrections are very welcome.</p></div></details>
+    <details class="acc"><summary>How quickly will I get a reply?</summary><div class="acc-body"><p>I read every message and reply as soon as I can, but I cannot promise a fixed time.</p></div></details>
+
+    <div class="next-nav"><a class="btn btn-ghost" href="about.html">&larr; About</a><a class="btn" href="index.html">Back to home</a></div>
+  </article>
+</div>

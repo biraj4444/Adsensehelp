@@ -1,0 +1,13 @@
+{
+  "name": "AdSense Helper",
+  "short_name": "AdSense Helper",
+  "description": "Independent step-by-step guide to setting up Google AdSense, with copy-ready code.",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3b6cf6",
+  "icons": [
+    { "src": "assets/img/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "assets/img/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}
